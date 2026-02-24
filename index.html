@@ -174,3 +174,121 @@ window.open(whatsappURL, "_blank");
 }
 </script>
 
+<div style="max-width:400px;margin:auto;padding:20px;border:1px solid #ccc;border-radius:10px;">
+
+  <!-- Product Image -->
+  <img src="https://rukminim1.flixcart.com/image/350/350/k2jbyq80/mobile/2/x/z/mi-redmi-note-12-redmi-original-imafhzgy4x7s5qjy.jpeg" 
+       alt="Flipkart Product" style="width:100%;border-radius:10px;margin-bottom:10px;">
+
+  <!-- Product Info -->
+  <h3>Pinkesh Official Product</h3>
+  <p>Price: ₹499</p>
+  <p>Cost Price: ₹350</p>
+  <p>Profit: ₹24.95 (Affiliate Commission)</p>
+  <a href="https://wishlink.com/pinkeshkumarba..." target="_blank" style="color:blue;">Buy Now on Flipkart</a>
+
+  <!-- COD Form -->
+  <div style="margin-top:20px;">
+      <input type="text" id="cod_name" placeholder="Full Name" required 
+             style="width:100%;padding:10px;margin-bottom:8px;border:1px solid #ccc;border-radius:5px;">
+
+      <input type="tel" id="cod_phone" placeholder="Phone Number" required 
+             style="width:100%;padding:10px;margin-bottom:8px;border:1px solid #ccc;border-radius:5px;">
+
+      <textarea id="cod_address" placeholder="Full Address" required 
+                style="width:100%;padding:10px;margin-bottom:8px;border:1px solid #ccc;border-radius:5px;"></textarea>
+
+      <input type="text" id="cod_pincode" placeholder="Pincode" required 
+             style="width:100%;padding:10px;margin-bottom:10px;border:1px solid #ccc;border-radius:5px;">
+
+      <!-- COD Button -->
+      <button onclick="sendCODOrder()" 
+              style="background-color:#28a745;color:white;padding:12px;border:none;border-radius:6px;font-size:16px;width:100%;cursor:pointer;">
+      Place COD Order
+      </button>
+
+      <!-- Pay Now Button -->
+      <button onclick="payNow()" 
+              style="background-color:#007bff;color:white;padding:12px;border:none;border-radius:6px;font-size:16px;width:100%;cursor:pointer;margin-top:10px;">
+      Pay Now
+      </button>
+  </div>
+
+</div>
+
+<script>
+function sendCODOrder(){
+    var name = document.getElementById("cod_name").value;
+    var phone = document.getElementById("cod_phone").value;
+    var address = document.getElementById("cod_address").value;
+    var pincode = document.getElementById("cod_pincode").value;
+
+    if(name=="" || phone=="" || address=="" || pincode==""){
+        alert("Please fill all details");
+        return;
+    }
+
+    // Product Details
+    var productName = "Pinkesh Official Product";
+    var sellingPrice = 499;
+    var costPrice = 350;
+    var commissionRate = 0.05; // 5% Affiliate
+    var profit = (sellingPrice * commissionRate).toFixed(2);
+    var productLink = "https://wishlink.com/pinkeshkumarba...";
+
+    // Auto Order ID
+    var orderID = "ORD" + Math.floor(Math.random()*100000);
+
+    // Date & Time
+    var today = new Date();
+    var dateTime = today.toLocaleString();
+
+    var message = 
+    "🛒 New COD Order%0A%0A" +
+    "Order ID: " + orderID + "%0A" +
+    "Date: " + dateTime + "%0A%0A" +
+    "Product: " + productName + "%0A" +
+    "Price: ₹" + sellingPrice + "%0A" +
+    "Affiliate Link: " + productLink + "%0A" +
+    "Profit: ₹" + profit + "%0A%0A" +
+    "Customer Details:%0A" +
+    "Name: " + name + "%0A" +
+    "Phone: " + phone + "%0A" +
+    "Address: " + address + "%0A" +
+    "Pincode: " + pincode;
+
+    var whatsappURL = "https://wa.me/918200850002?text=" + message;
+    window.open(whatsappURL, "_blank");
+}
+
+function payNow(){
+    var productName = "Pinkesh Official Product";
+    var sellingPrice = 499;
+    var commissionRate = 0.05; // 5% Affiliate
+    var profit = (sellingPrice * commissionRate).toFixed(2);
+    var productLink = "https://wishlink.com/pinkeshkumarba...";
+
+    // Auto Order ID
+    var orderID = "ORD" + Math.floor(Math.random()*100000);
+
+    // Date & Time
+    var today = new Date();
+    var dateTime = today.toLocaleString();
+
+    var message = 
+    "🛒 New Paid Order%0A%0A" +
+    "Order ID: " + orderID + "%0A" +
+    "Date: " + dateTime + "%0A%0A" +
+    "Product: " + productName + "%0A" +
+    "Price: ₹" + sellingPrice + "%0A" +
+    "Affiliate Link: " + productLink + "%0A" +
+    "Profit: ₹" + profit;
+
+    // WhatsApp notification
+    var whatsappURL = "https://wa.me/918200850002?text=" + message;
+    window.open(whatsappURL, "_blank");
+
+    // Redirect to Affiliate Link
+    window.location.href = productLink; 
+}
+</script>
