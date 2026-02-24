@@ -175,3 +175,51 @@ window.open(whatsappURL, "_blank");
 </script>
 
 
+
+
+<div class="product-card" style="border:1px solid #ccc; padding:20px; width:320px; margin:15px; border-radius:8px; font-family:Arial, sans-serif;">
+    <!-- Product Image -->
+    <img src="https://example.com/red-hoodie.jpg" alt="Red Hoodie" style="width:100%; height:auto; border-radius:5px; margin-bottom:12px;">
+
+    <!-- Product Info -->
+    <h3 style="margin:0 0 8px 0; font-size:20px; color:#333;">Red Hoodie</h3>
+    <p style="margin:0 0 15px 0; font-size:16px; color:#555;">Price: ₹549</p>
+
+    <!-- Pay Now Button (Placeholder for now) -->
+    <a href="#" target="_blank" 
+       style="display:block; text-align:center; padding:12px; background-color:#28a745; color:white; border-radius:5px; text-decoration:none; font-weight:bold; margin-bottom:15px;">
+       Pay Now ₹549
+    </a>
+
+    <!-- COD Form -->
+    <h4 style="margin:0 0 10px 0; color:#333;">Cash on Delivery</h4>
+    <input type="text" id="cod_name" placeholder="Full Name" style="width:100%; padding:12px; margin-bottom:10px; border:1px solid #ccc; border-radius:5px;" required>
+    
+    <input type="tel" id="cod_phone" placeholder="Phone Number" value="8200850002" style="width:100%; padding:12px; margin-bottom:10px; border:1px solid #ccc; border-radius:5px;" required>
+    
+    <input type="text" id="cod_address" placeholder="Full Address" style="width:100%; padding:12px; margin-bottom:10px; border:1px solid #ccc; border-radius:5px;" required>
+    
+    <input type="text" id="cod_pincode" placeholder="Pincode" style="width:100%; padding:12px; margin-bottom:12px; border:1px solid #ccc; border-radius:5px;" required>
+    
+    <button onclick="placeCODOrder()" 
+        style="width:100%; padding:12px; background-color:#007bff; color:white; border:none; border-radius:5px; font-weight:bold;">
+        Place COD Order
+    </button>
+
+    <p style="margin-top:12px; font-size:12px; color:#777;">For queries, email: <a href="mailto:pinkeshmangela10@gmail.com">pinkeshmangela10@gmail.com</a></p>
+</div>
+
+<script>
+function placeCODOrder() {
+    var name = document.getElementById('cod_name').value;
+    var phone = document.getElementById('cod_phone').value;
+    var address = document.getElementById('cod_address').value;
+    var pincode = document.getElementById('cod_pincode').value;
+    
+    if(name && phone && address && pincode){
+        alert("✅ COD Order Placed Successfully!\n\nName: "+name+"\nPhone: "+phone+"\nAddress: "+address+"\nPincode: "+pincode+"\n\nWe will contact you soon.");
+    } else {
+        alert("⚠️ Please fill all fields before placing the order.");
+    }
+}
+</script>
