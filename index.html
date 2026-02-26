@@ -163,22 +163,134 @@ var orderID = "ORD" + Math.floor(Math.random()*100000);
 var today = new Date();
 var dateTime = today.toLocaleString();
 
-var message = 
-"🛒 New COD Order%0A%0A" +
-"Order ID: " + orderID + "%0A" +
-"Date: " + dateTime + "%0A%0A" +
-"Product: Pinkesh Official Product%0A" +
-"Price: ₹999%0A%0A" +
-"Customer Details:%0A" +
-"Name: " + name + "%0A" +
-"Phone: " + phone + "%0A" +
-"Address: " + address + "%0A" +
-"Pincode: " + pincode;
+<!DOCTYPE html>
+<html>
+<head>
+<title>PINKESH OFFICIAL BRAND</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background:#f4f4f4;
+    margin:0;
+}
+.header{
+    background:black;
+    color:white;
+    padding:15px;
+    text-align:center;
+    font-size:18px;
+    font-weight:bold;
+}
+.container{
+    max-width:400px;
+    margin:20px auto;
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+.price{
+    color:green;
+    font-size:22px;
+    font-weight:bold;
+    text-align:center;
+}
+.stock{
+    color:red;
+    font-weight:bold;
+    text-align:center;
+}
+input, textarea{
+    width:100%;
+    padding:10px;
+    margin-bottom:10px;
+    border-radius:6px;
+    border:1px solid #ccc;
+}
+button{
+    width:100%;
+    padding:12px;
+    background:black;
+    color:white;
+    border:none;
+    border-radius:6px;
+    font-size:16px;
+    cursor:pointer;
+}
+.footer{
+    text-align:center;
+    font-size:13px;
+    padding:15px;
+    color:#555;
+}
+</style>
+</head>
 
-var whatsappURL = "https://wa.me/918200850002?text=" + message;
+<body>
 
-window.open(whatsappURL, "_blank");
+<div class="header">
+PINKESH OFFICIAL BRAND
+</div>
+
+<div class="container">
+
+<h2 style="text-align:center;">Premium Ladies Tote Handbag 💼</h2>
+
+<img src="handbag.jpg" style="width:100%; border-radius:10px;">
+
+<p class="price">₹749</p>
+<p class="stock">Only 5 Pieces Left 🔥</p>
+
+<p>
+✔ Premium Quality Material<br>
+✔ Strong Zip Closure<br>
+✔ Spacious & Stylish Design<br>
+✔ Perfect for Office & Daily Use
+</p>
+
+<h3>Cash on Delivery Available 🚚</h3>
+
+<input type="text" id="name" placeholder="Full Name">
+<input type="tel" id="phone" placeholder="Phone Number">
+<textarea id="address" placeholder="Full Address"></textarea>
+
+<button onclick="sendOrder()">Place COD Order</button>
+
+</div>
+
+<div class="footer">
+📞 8200850002 <br>
+📧 pinkeshmangela10@gmail.com <br>
+© 2026 PINKESH OFFICIAL BRAND
+</div>
+
+<script>
+function sendOrder(){
+
+let name = document.getElementById("name").value;
+let phone = document.getElementById("phone").value;
+let address = document.getElementById("address").value;
+
+if(name=="" || phone=="" || address==""){
+alert("Please fill all details!");
+return;
+}
+
+let message = "New Handbag Order:%0A%0A"
++ "Brand: PINKESH OFFICIAL BRAND%0A"
++ "Product: Premium Ladies Tote Handbag%0A"
++ "Price: ₹749%0A%0A"
++ "Name: " + name + "%0A"
++ "Phone: " + phone + "%0A"
++ "Address: " + address;
+
+window.open("https://wa.me/918200850002?text=" + message);
+
 }
 </script>
+
+</body>
+</html>
 
 
