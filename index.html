@@ -165,3 +165,58 @@ window.open("https://wa.me/918200850002?text=" + message);
 
 </body>
 </html>
+
+<div class="container">
+
+<h2>Trendy PU Leather Tote Handbag 👜</h2>
+
+<img src="IMG_0093.jpeg">
+<img src="IMG_0094.jpeg">
+<img src="IMG_0095.jpeg">
+
+<p class="price">₹849</p>
+<p class="stock">Limited Stock Available 🔥</p>
+
+<p>
+✔ Material: Premium PU Leather<br>
+✔ Pattern: Solid<br>
+✔ Compartments: 1 Spacious Compartment<br>
+✔ Size: 15in x 14in x 15in (Free Size)<br>
+✔ Perfect for Office, College & Casual Use<br>
+✔ Country of Origin: India
+</p>
+
+<h3>Cash on Delivery Available 🚚</h3>
+
+<input type="text" id="name2" placeholder="Full Name">
+<input type="tel" id="phone2" placeholder="Phone Number">
+<textarea id="address2" placeholder="Full Address"></textarea>
+
+<button onclick="sendOrder2()">Place COD Order</button>
+
+</div>
+
+<script>
+function sendOrder2(){
+
+let name = document.getElementById("name2").value;
+let phone = document.getElementById("phone2").value;
+let address = document.getElementById("address2").value;
+
+if(name=="" || phone=="" || address==""){
+alert("Please fill all details!");
+return;
+}
+
+let message = "New Handbag Order:%0A%0A"
++ "Brand: PINKESH OFFICIAL BRAND%0A"
++ "Product: Trendy PU Leather Tote Handbag%0A"
++ "Price: ₹849%0A%0A"
++ "Name: " + name + "%0A"
++ "Phone: " + phone + "%0A"
++ "Address: " + address;
+
+window.open("https://wa.me/918200850002?text=" + message);
+
+}
+</script>
