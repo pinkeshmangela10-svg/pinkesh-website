@@ -336,3 +336,57 @@ let message = "New Clutch Order:%0A%0A"
 window.open("https://wa.me/918200850002?text=" + message);
 
 }
+
+<div class="container">
+
+<h2>Black Solid Color Shoulder Bag 🖤</h2>
+
+<img src="IMG_0102.jpeg">
+<img src="IMG_0103.jpeg">
+<img src="IMG_0104.jpeg">
+<img src="IMG_0105.jpeg">
+
+<p class="price">₹849</p>
+<p class="stock">High Capacity Office Tote 🔥 Limited Stock</p>
+
+<p>
+✔ Material: Faux Leather / Leatherette<br>
+✔ Compartments: 1 Spacious Section<br>
+✔ Pattern: Solid<br>
+✔ Size: 14in x 4in x 11in (Free Size)<br>
+✔ Magnetic Button Closure<br>
+✔ Lightweight & Easy to Clean<br>
+✔ Perfect for Office, Travel & Daily Use<br>
+✔ Country of Origin: India
+</p>
+
+<h3>Cash on Delivery Available 🚚</h3>
+
+<input type="text" id="name5" placeholder="Full Name">
+<input type="tel" id="phone5" placeholder="Phone Number">
+<textarea id="address5" placeholder="Full Address"></textarea>
+
+<button onclick="sendOrder5()">Place COD Order</button>
+
+</div>function sendOrder5(){
+
+let name = document.getElementById("name5").value;
+let phone = document.getElementById("phone5").value;
+let address = document.getElementById("address5").value;
+
+if(name=="" || phone=="" || address==""){
+alert("Please fill all details!");
+return;
+}
+
+let message = "New Handbag Order:%0A%0A"
++ "Brand: PINKESH OFFICIAL BRAND%0A"
++ "Product: Black Solid Color Shoulder Bag%0A"
++ "Price: ₹849%0A%0A"
++ "Name: " + name + "%0A"
++ "Phone: " + phone + "%0A"
++ "Address: " + address;
+
+window.open("https://wa.me/918200850002?text=" + message);
+
+}
