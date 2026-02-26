@@ -220,3 +220,59 @@ window.open("https://wa.me/918200850002?text=" + message);
 
 }
 </script>
+
+
+<div class="container">
+
+<h2>Premium Women Shoulder Bag ✨</h2>
+
+<img src="IMG_0098.jpeg">
+<img src="IMG_0097.jpeg">
+<img src="IMG_0096.jpeg">
+<img src="IMG_0099.jpeg">
+
+<p class="price">₹1249</p>
+<p class="stock">Premium Collection 🔥 Limited Pieces</p>
+
+<p>
+✔ Material: Faux Leather / Leatherette<br>
+✔ Compartments: 3 Spacious Sections<br>
+✔ Pattern: Solid<br>
+✔ Size: 11in x 4in x 9in (Free Size)<br>
+✔ Water-Resistant & Durable<br>
+✔ Perfect for Office, Travel & Daily Use<br>
+✔ Country of Origin: India
+</p>
+
+<h3>Cash on Delivery Available 🚚</h3>
+
+<input type="text" id="name3" placeholder="Full Name">
+<input type="tel" id="phone3" placeholder="Phone Number">
+<textarea id="address3" placeholder="Full Address"></textarea>
+
+<button onclick="sendOrder3()">Place COD Order</button>
+
+</div>
+
+function sendOrder3(){
+
+let name = document.getElementById("name3").value;
+let phone = document.getElementById("phone3").value;
+let address = document.getElementById("address3").value;
+
+if(name=="" || phone=="" || address==""){
+alert("Please fill all details!");
+return;
+}
+
+let message = "New Handbag Order:%0A%0A"
++ "Brand: PINKESH OFFICIAL BRAND%0A"
++ "Product: Premium Women Shoulder Bag%0A"
++ "Price: ₹1249%0A%0A"
++ "Name: " + name + "%0A"
++ "Phone: " + phone + "%0A"
++ "Address: " + address;
+
+window.open("https://wa.me/918200850002?text=" + message);
+
+}
