@@ -276,3 +276,63 @@ let message = "New Handbag Order:%0A%0A"
 window.open("https://wa.me/918200850002?text=" + message);
 
 }
+
+
+
+
+
+
+
+
+
+
+
+<div class="container">
+
+<h2>Styles Trendy Women Clutches ✨</h2>
+
+<img src="IMG_0101.jpeg">
+<img src="IMG_0100.jpeg">
+
+<p class="price">₹699</p>
+<p class="stock">Fast Moving Product 🔥 Dispatch in 1 Day</p>
+
+<p>
+✔ Material: Premium PU<br>
+✔ Pattern: Embellished - Metal Design<br>
+✔ Compartments: 2 Sections<br>
+✔ Size: 12in x 8in (Free Size)<br>
+✔ Perfect for Parties & Special Occasions<br>
+✔ Country of Origin: India
+</p>
+
+<h3>Cash on Delivery Available 🚚</h3>
+
+<input type="text" id="name4" placeholder="Full Name">
+<input type="tel" id="phone4" placeholder="Phone Number">
+<textarea id="address4" placeholder="Full Address"></textarea>
+
+<button onclick="sendOrder4()">Place COD Order</button>
+
+</div>function sendOrder4(){
+
+let name = document.getElementById("name4").value;
+let phone = document.getElementById("phone4").value;
+let address = document.getElementById("address4").value;
+
+if(name=="" || phone=="" || address==""){
+alert("Please fill all details!");
+return;
+}
+
+let message = "New Clutch Order:%0A%0A"
++ "Brand: PINKESH OFFICIAL BRAND%0A"
++ "Product: Styles Trendy Women Clutches%0A"
++ "Price: ₹699%0A%0A"
++ "Name: " + name + "%0A"
++ "Phone: " + phone + "%0A"
++ "Address: " + address;
+
+window.open("https://wa.me/918200850002?text=" + message);
+
+}
