@@ -173,6 +173,76 @@ Available Tomorrow 10:00 AM
 
 <div class="container">
 
+<h2>Women's Elegant Flat Slippers 👡</h2>
+<p><b>Soft Cushion Casual Wear</b></p>
+
+<img src="IMG_0347.jpeg" width="100%">
+<img src="IMG_0348.jpeg" width="100%">
+<img src="IMG_0349.jpeg" width="100%">
+<img src="IMG_0350.jpeg" width="100%">
+
+<p class="price">₹349</p>
+<p class="stock">4 Similar Products 🔥 Limited Stock</p>
+
+<p>
+✔ Soft Cushion Comfortable Sole<br>
+✔ Elegant & Casual Design<br>
+✔ Lightweight & Daily Wear Friendly<br>
+✔ Perfect for Indoor & Outdoor Use<br>
+✔ Available Sizes: 4 to 9<br>
+✔ Country of Origin: India
+</p>
+
+<h3>Select Size</h3>
+<select id="size10">
+<option value="">Select Size</option>
+<option value="IND-4">IND-4</option>
+<option value="IND-5">IND-5</option>
+<option value="IND-6">IND-6</option>
+<option value="IND-7">IND-7</option>
+<option value="IND-8">IND-8</option>
+<option value="IND-9">IND-9</option>
+</select>
+
+<h3>Cash on Delivery Available 🚚</h3>
+
+<input type="text" id="name10" placeholder="Full Name">
+<input type="tel" id="phone10" placeholder="Phone Number">
+<textarea id="address10" placeholder="Full Address"></textarea>
+
+<button onclick="sendOrder10()">Place COD Order</button>
+
+</div>
+
+<script>
+function sendOrder10(){
+
+let name = document.getElementById("name10").value;
+let phone = document.getElementById("phone10").value;
+let address = document.getElementById("address10").value;
+let size = document.getElementById("size10").value;
+
+if(name=="" || phone=="" || address=="" || size==""){
+alert("Please fill all details & select size!");
+return;
+}
+
+let message = "New Elegant Slippers Order:%0A%0A"
++ "Brand: PINKESH OFFICIAL BRAND%0A"
++ "Product: Women's Elegant Flat Slippers%0A"
++ "Price: ₹349%0A"
++ "Size: " + size + "%0A%0A"
++ "Name: " + name + "%0A"
++ "Phone: " + phone + "%0A"
++ "Address: " + address;
+
+window.open("https://wa.me/918200850002?text=" + message);
+
+}
+</script>
+
+<div class="container">
+
 <h2>Premium Women Flat Sandals 👡</h2>
 <p><b>Designer Fancy Ladies Chappal | Soft Comforts | Festive Wear</b></p>
 
