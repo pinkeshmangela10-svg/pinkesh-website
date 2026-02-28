@@ -171,6 +171,95 @@ Available Tomorrow 10:00 AM
 
 </section>
 
+
+<div class="container" id="productContainer">
+
+<h2>Premium Stylish Slippers 🤍</h2>
+
+<!-- Countdown -->
+<p id="countdown" style="color:red; font-weight:bold;"></p>
+
+<img src="IMG_0308.jpeg">
+
+<p class="price">₹322</p>
+<p class="stock">Trendy Design 🔥 Limited Stock</p>
+
+<p>
+✔ Soft & Comfortable Sole<br>
+✔ Elegant Bow Design<br>
+✔ Lightweight & Easy to Wear<br>
+✔ Perfect for Daily & Casual Use<br>
+✔ Available Sizes: 4 to 9<br>
+✔ Country of Origin: India
+</p>
+
+<h3>Cash on Delivery Available 🚚</h3>
+
+<input type="text" id="name6" placeholder="Full Name">
+<input type="tel" id="phone6" placeholder="Phone Number">
+<textarea id="address6" placeholder="Full Address"></textarea>
+
+<button id="orderBtn" onclick="sendOrder6()">Place COD Order</button>
+
+</div>
+
+<script>
+
+// 🔥 Closing Time (Kal 10 AM)
+var closingTime = new Date("March 1, 2026 10:00:00").getTime();
+
+var timer = setInterval(function() {
+
+  var now = new Date().getTime();
+  var distance = closingTime - now;
+
+  if (distance < 0) {
+    clearInterval(timer);
+    document.getElementById("productContainer").innerHTML = 
+    "<h2>⛔ Offer Closed</h2><p>This product was available till 10 AM only.</p>";
+  } else {
+
+    var hours = Math.floor((distance % (1000*60*60*24)) / (1000*60*60));
+    var minutes = Math.floor((distance % (1000*60*60)) / (1000*60));
+    var seconds = Math.floor((distance % (1000*60)) / 1000);
+
+    document.getElementById("countdown").innerHTML =
+    "⏳ Offer Ends In: " + hours + "h "
+    + minutes + "m " + seconds + "s";
+
+  }
+
+}, 1000);
+
+
+// COD FUNCTION SAME
+function sendOrder6(){
+
+let name = document.getElementById("name6").value;
+let phone = document.getElementById("phone6").value;
+let address = document.getElementById("address6").value;
+
+if(name=="" || phone=="" || address==""){
+alert("Please fill all details!");
+return;
+}
+
+let message = "New Slippers Order:%0A%0A"
++ "Brand: PINKESH OFFICIAL BRAND%0A"
++ "Product: Premium Stylish Slippers%0A"
++ "Price: ₹322%0A%0A"
++ "Name: " + name + "%0A"
++ "Phone: " + phone + "%0A"
++ "Address: " + address;
+
+window.open("https://wa.me/918200850002?text=" + message);
+
+}
+
+</script>
+
+
+
 <script>
 var launchDate = new Date("Mar 1, 2026 10:00:00").getTime();
 
