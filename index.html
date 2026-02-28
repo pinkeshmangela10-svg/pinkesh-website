@@ -101,6 +101,50 @@ margin-top:30px;
 rzp_test_SLOqhA8iBC7...
 <body>
 
+<section style="text-align:center; padding:40px; background:#f5f5f5; font-family:Arial;">
+
+<h2 style="font-size:28px;">New Stylish Slippers 👡</h2>
+
+<img src="slipper.jpg" alt="Stylish Slippers" style="width:250px; border-radius:10px; margin-top:20px;">
+
+<p style="font-size:18px; margin-top:15px;">
+Comfortable • Trendy • Budget Friendly
+</p>
+
+<h3 style="color:red;">⚠ Only 5 Pieces Available</h3>
+
+<p id="countdown" style="font-size:20px; font-weight:bold; margin-top:10px;"></p>
+
+<button style="padding:12px 25px; font-size:16px; background:black; color:white; border:none; border-radius:5px; margin-top:20px;">
+Available Tomorrow 10:00 AM
+</button>
+
+</section>
+
+<script>
+var launchDate = new Date("Mar 1, 2026 10:00:00").getTime();
+
+var x = setInterval(function() {
+
+var now = new Date().getTime();
+var distance = launchDate - now;
+
+var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+document.getElementById("countdown").innerHTML =
+"Launching In: " + hours + "h "
++ minutes + "m " + seconds + "s ";
+
+if (distance < 0) {
+clearInterval(x);
+document.getElementById("countdown").innerHTML = "🔥 LIVE NOW – Shop Fast!";
+}
+
+}, 1000);
+</script>
+
 <div class="header">
 <img src="IMG_0023.png" class="logo">
 <br>
